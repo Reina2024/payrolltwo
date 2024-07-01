@@ -1,20 +1,62 @@
 // Get a reference to the #add-employees-btn element
-const addEmployeesBtn = document.querySelector('#add-employees-btn');
+const addEmployeesBtn = document.querySelector("#add-employees-btn");
 
 // Collect employee data
-const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
-}
+const employeesArray = [];
+
+// check if they want to keep adding employees-Boolean
+
+const collectEmployees = function () {
+  let keepGoing = true;
+
+  while (keepGoing) {
+    // TODO: Get user input to create and return an array of employee objects
+    const firstName = prompt("Please enter the employee's first name");
+    const lastName = prompt("Please enter the employee's last name");
+    let salary = prompt("Please enter the employee's salary");
+
+    // employee object
+    const employee = {
+      firstName: firstName,
+      lastName: lastName,
+      salary: parseFloat(salary)
+    }
+    // push employee to employeesArray
+    employeesArray.push(employee);
+
+    keepGoing = confirm("Would you like to add another employee?");
+    // "OK" = true, "Cancel" = false
+  }
+  return employeesArray;
+};
+console.log(employeesArray);
 
 // Display the average salary
-const displayAverageSalary = function(employeesArray) {
+const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
-}
+  let avTotal = 0;
+  const numberEmployees = employeesArray.length;
+
+  for (const employee of employeesArray) {
+    avTotal += employee.salary; 
+  }
+
+  const avgSalary = avTotal / numberEmployees;
+  console.log(`Your employees have an average of ${avgSalary} dollars!`);
+};
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+  const randomEmployee = employeesArray[Math.floor(Math.random()*employeesArray.length)];
+
+  console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName}, our random drawing winner!`)
 }
+
+
+
+
+
+
 
 /*
   ====================
