@@ -1,9 +1,10 @@
+/* Element Selector */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
+/* "wrapper is used to help format pages, often devs use it to style a table making it easier to center and align */
 html,
 body,
 .wrapper {
@@ -11,7 +12,7 @@ body,
   margin: 0;
   padding: 0;
 }
-
+/* body styles */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
@@ -22,7 +23,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+/* header styles */
 header {
   text-align: center;
   padding: 20px;
@@ -57,7 +58,7 @@ h2 {
 .card-body {
   min-height: 100px;
 }
-
+/* table styles */
 table {
   width:100%;
   border-spacing: 0;
@@ -90,7 +91,7 @@ tbody tr:nth-child(even) {
   display: block;
   clear: both;
 }
-
+/* Button Styles */
 .btn {
   border: none;
   background-color: hsl(223, 74%, 48%);
@@ -115,7 +116,7 @@ button[disabled] {
   float: right;
 }
 
-
+/* Media Querry */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
