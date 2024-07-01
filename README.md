@@ -7,5 +7,7 @@ Here is a screen cap of my project:
 ![Alt text](./assets/images/Screenshot%202024-07-01%20at%203.08.44 PM.png "Portfolio Screen Cap")
 
 # Links
+https://reina2024.github.io/payrolltwo/
 
+https://github.com/Reina2024/payrolltwo 
 
